@@ -27,6 +27,11 @@ ingredients_list = st.multiselect ('Choose up to 5 ingredients:'
 , max_selections=5
 )
 
+if ingredients_list:
+  ingredients_string = ''
+  for fruit_chosen in ingredients_list:
+      ingredients_string += fruit_chosen + ' '
+      my_insert_stmt = """ insert into smoothies.public.orders(ingredients,NAME_ON_ORDER) values ('""" + ingredients_string + """','"""+name_on_order+ """')"""
 
 
 import requests
