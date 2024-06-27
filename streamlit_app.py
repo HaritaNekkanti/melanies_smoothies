@@ -46,7 +46,7 @@ if ingredients_list:
       fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_chosen)
       fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
 
-st.write(my_insert_stmt)
+# st.write(my_insert_stmt)
 time_to_insert = st.button ('Submit Order')
 
 if time_to_insert:
